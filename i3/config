@@ -174,15 +174,15 @@ client.unfocused        #555555     #333333     #EEEEEE
 client.background       #444444     #444444     #EEEEEE
 
 
-# volume control (Alt + F2 or Alt + F3)
-bindcode $mod+68 exec amixer set Master 5%-
-bindcode $mod+69 exec amixer set Master 5%+
-
 # Brightness control
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 
 
-#Lock computer (mod + Delete)
-bindcode $mod+119 exec i3lock -c 000000
+#Lock computer
+bindsym $mod+Delete exec --no-startup-id "i3lock -c 000000"
+
+#Lock screen and suspend
+bindsym $mod+End exec --no-startup-id "i3lock -c 000000 && systemctl suspend"
+
