@@ -1,4 +1,3 @@
-
 #startup programs
 exec --no-startup-id dropbox start
 exec --no-startup-id xsetroot -solid "#222222"
@@ -121,7 +120,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit i3?' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -178,11 +177,18 @@ client.background       #444444     #444444     #EEEEEE
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
-
+bindsym XF86AudioRaiseVolume  exec amixer set Master 5%+
+bindsym XF86AudioLowerVolume  exec amixer set Master 5%-
 
 #Lock computer
 bindsym $mod+Delete exec --no-startup-id "i3lock -c 000000"
 
 #Lock screen and suspend
 bindsym $mod+End exec --no-startup-id "i3lock -c 000000 && systemctl suspend"
+
+
+
+
+
+
 
