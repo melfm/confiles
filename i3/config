@@ -1,6 +1,7 @@
 #startup programs
 exec --no-startup-id dropbox start
 exec --no-startup-id xsetroot -solid "#222222"
+exec --no-startup-id nm-applet
 
 set $mod Mod4
 
@@ -162,20 +163,21 @@ bar {
         active_workspace   #333333 #5f676a #ffffff
         inactive_workspace #333333 #222222 #888888
         urgent_workspace   #2f343a #900000 #ffffff
+        binding_mode       #2f343a #900000 #ffffff
     }
-        status_command i3status
+        status_command i3status -c  ~/.config/i3/i3status.conf
 }
 
 
 # colors                border      background    text
 client.focused          #000000     #3A5894     #EEEEEE
 client.unfocused        #555555     #333333     #EEEEEE
-client.background       #444444     #444444     #EEEEEE
+client.background       #ffffff
 
 
 # Brightness control
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 bindsym XF86AudioRaiseVolume  exec amixer set Master 5%+
 bindsym XF86AudioLowerVolume  exec amixer set Master 5%-
