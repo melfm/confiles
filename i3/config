@@ -181,9 +181,12 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightnes
 
 bindsym XF86AudioRaiseVolume  exec amixer set Master 5%+
 bindsym XF86AudioLowerVolume  exec amixer set Master 5%-
+bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
 
 #Lock computer
 bindsym $mod+Delete exec --no-startup-id "i3lock -c 000000"
+#Suspend
+bindsym $mod+Control+Delete exec systemctl suspend -i
 
 #Lock screen and suspend
 bindsym $mod+End exec --no-startup-id "i3lock -c 000000 && systemctl suspend"
