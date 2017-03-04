@@ -16,7 +16,8 @@ install_dependencies()
         thunar \
         gnome-icon-theme-full \
         pavucontrol \
-        v4l-utils
+        v4l-utils \
+        thunar-archive-plugin 
 }
 
 install_tmux()
