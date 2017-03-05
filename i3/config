@@ -188,13 +188,8 @@ bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
 bindsym $mod+Delete exec --no-startup-id "i3lock -c 000000"
 #Suspend
 bindsym $mod+Control+Delete exec systemctl suspend -i
+# ubuntu 14.04
+#bindsym $mod+Control+Delete exec "sudo /usr/sbin/pm-suspend"
 
 #Lock screen and suspend
 bindsym $mod+End exec --no-startup-id "i3lock -c 000000 && systemctl suspend"
-
-
-
-
-
-
-
