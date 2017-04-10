@@ -18,25 +18,10 @@ install_dependencies()
         pavucontrol \
         v4l-utils \
         thunar-archive-plugin \
-        xfce4-screenshooter
+        xfce4-screenshooter \
+        tmux
 }
 
-install_tmux()
-{
-    cd /tmp
-    sudo apt-get install -y \
-        libevent-2.0-5 \
-        libevent-dev \
-        libncurses5-dev \
-        libncursesw5-dev
-
-    git clone https://github.com/tmux/tmux.git
-    cd tmux
-    sh autogen.sh
-    ./configure && make
-    cp tmux /usr/local/bin
-    cd ..
-}
 
 install_dropbox()
 {
@@ -50,7 +35,7 @@ install_chrome()
 {
      wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
      sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
-     sudo apt-get update 
+     sudo apt-get update
      sudo apt-get install google-chrome-stable
 }
 
@@ -100,7 +85,6 @@ init_vim()
 init()
 {
     install_dependencies
-    #install_tmux
     install_dropbox
     install_chrome
     git_config
