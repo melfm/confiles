@@ -17,7 +17,8 @@ install_dependencies()
         gnome-icon-theme-full \
         pavucontrol \
         v4l-utils \
-        thunar-archive-plugin 
+        thunar-archive-plugin \
+        xfce4-screenshooter
 }
 
 install_tmux()
@@ -91,10 +92,7 @@ init_vim()
     echo "install vim plugins"
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
-    git submodule init
-    git submodule update
     vim -c VundleInstall -c quitall
-    exec ./vim/bundle/fzf/install --all
 
     return 0;
 }
@@ -102,7 +100,7 @@ init_vim()
 init()
 {
     install_dependencies
-    install_tmux
+    #install_tmux
     install_dropbox
     install_chrome
     git_config

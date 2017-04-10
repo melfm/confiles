@@ -168,7 +168,7 @@ bar {
     }
 
     # i3bar status
-    status_command i3status -c ~/.i3/i3status.conf
+    status_command i3status -c ~/.config/i3/i3status.conf
 }
 # colors                border      background    text
 client.focused          #000000     #3A5894     #EEEEEE
