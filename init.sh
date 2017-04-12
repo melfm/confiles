@@ -19,7 +19,8 @@ install_dependencies()
         v4l-utils \
         thunar-archive-plugin \
         xfce4-screenshooter \
-        tmux
+        tmux \
+	python-matplotlib
 }
 
 
