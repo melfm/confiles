@@ -45,10 +45,16 @@ install_tensorflow()
      sudo apt-get install python-pip
      sudo apt-get install python-pip python-dev
      sudo pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.10.0rc0-cp27-none-linux_x86_64.whl
-
-
-
 }
+
+install_spotify()
+{
+     sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
+     echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
+     sudo apt-get update
+     sudo apt-get install spotify-client
+}
+
 git_config()
 {
     git config --global user.name "Melissa Mozifian"
