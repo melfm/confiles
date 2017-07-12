@@ -20,7 +20,9 @@ install_dependencies()
         thunar-archive-plugin \
         xfce4-screenshooter \
         tmux \
-	python-matplotlib
+	python-matplotlib \
+	arandr \
+	xclip
 }
 
 
@@ -89,13 +91,19 @@ init_vim()
     return 0;
 }
 
+install_python_dev()
+{
+    echo "install python3 dev and pip3"
+    sudo apt-get install python3-pip python3-dev
+}
+
 init()
 {
     install_dependencies
     install_dropbox
     install_chrome
     git_config
-
+    install_python_dev
     init_dotfiles
     init_vim
     echo "Done! :)"
