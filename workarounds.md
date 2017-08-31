@@ -7,3 +7,9 @@ Ubuntu 16.04 brightness for dell xp
 
 Ubuntu stop x
 Ctrl + Alt + F1 + Fn
+
+
+
+--------------------------------------------------
+Git commands:
+git branch | grep -v "master" | xargs git branch -D 
