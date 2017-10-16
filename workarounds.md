@@ -14,7 +14,9 @@ Ctrl + Alt + F1 + Fn
 Git commands:
 
 % Removing local branches
+
 git branch | grep -v "master" | xargs git branch -D 
 
 % Updating submodule
+
 git submodule update --recursive --remote
