@@ -20,6 +20,7 @@ install_dependencies()
         thunar-archive-plugin \
         xfce4-screenshooter \
         tmux \
+        redshift redshift-gtk
 	python-matplotlib \
 	arandr \
 	xclip
@@ -36,7 +37,7 @@ install_dropbox()
 
 install_chrome()
 {
-     wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+     wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
      sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
      sudo apt-get update
      sudo apt-get install google-chrome-stable
@@ -44,9 +45,14 @@ install_chrome()
 
 install_tensorflow()
 {
-     sudo apt-get install python-pip
      sudo apt-get install python-pip python-dev
-     sudo pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.10.0rc0-cp27-none-linux_x86_64.whl
+     sudo pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.9.0-cp35-cp35m-linux_x86_64.whl
+}
+
+install_python_pckgs()
+{
+    sudo apt-get install python-pip python-dev
+    sudo pip install virtualenv
 }
 
 install_spotify()
@@ -100,8 +106,10 @@ install_python_dev()
 init()
 {
     install_dependencies
+    install_python_pckgs
     install_dropbox
     install_chrome
+    install_spotify
     git_config
     install_python_dev
     init_dotfiles
