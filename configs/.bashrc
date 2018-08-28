@@ -130,7 +130,7 @@ export PATH="$PATH:/usr/local/cuda-8.0/bin"
 export CUDA_HOME="/usr/local/cuda-8.0/"
 
 # Added for mujoco
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/melissa/.mujoco/mjpro150/bin:/usr/lib/nvidia-384:/usr/local/cuda-8.0/lib64"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/.mujoco/mjpro150/bin:/usr/lib/nvidia-384:/usr/local/cuda-8.0/lib64"
 # Needed for GL version
 export LD_PRELOAD="/usr/lib/x86_64-linux-gnu/libGLEW.so"
 
