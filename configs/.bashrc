@@ -117,9 +117,36 @@ if ! shopt -oq posix; then
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# Disable touchpad tap click on dell xp
+synclient MaxTapTime=0
 
 # SHELL SETTINGS
 parse_git_branch() {
         git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
     }
 PS1='[\w]\[\033[1;35m\]$(parse_git_branch)\[\033[0m\] > '
+
+export PATH="$PATH:/usr/local/cuda-8.0/bin"
+export CUDA_HOME="/usr/local/cuda-8.0/"
+
+# Added for mujoco
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/melissa/.mujoco/mjpro150/bin:/usr/lib/nvidia-384:/usr/local/cuda-8.0/lib64"
+# Needed for GL version
+export LD_PRELOAD="/usr/lib/x86_64-linux-gnu/libGLEW.so"
+
+export WORKSPACE="$HOME/Workspace"
+
+alias python="python3.5"
+
+alias down="cd ~/Downloads";
+alias mlplay="cd $WORKSPACE/ml-playground/"
+alias cs231="cd $WORKSPACE/ml-playground/playground/cs231n/"
+
+# ML Playground
+alias deeprl="cd $WORKSPACE/ml-playground/playground/CS294/hw1/"
+# TODO: Update this
+alias csact="cd $WORKSPACE/ml-playground/playground/cs231n/; source .env/bin/activate; deeprl"
+
+# CARLA
+alias carla="cd /home/melissa/Workspace/CARLA_0.8.4"
+alias actcar="carla; cd PythonClient; source .carla/bin/activate"
