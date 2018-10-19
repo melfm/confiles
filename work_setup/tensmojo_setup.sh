@@ -29,6 +29,8 @@ rm ~/Downloads/mjpro150_linux.zip
 # echo "export MUJOCO_PY_MJPRO_PATH=/home/ml/$USER/.mjpro150/mjpro150">>~/.bashrc
 # echo "export MUJOCO_PY_MJKEY_PATH=/usr/local/pkgs/MuJoCo/mjpro150/bin/mjkey.txt">>~/.bashrc
 
+# Box2D dependency
+sudo apt-get install swig
 # Install appropriate gym/mujoco-py
 pip3 install 'mujoco_py==1.50.1.56'
 pip3 install 'seaborn'
