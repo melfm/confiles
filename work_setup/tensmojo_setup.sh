@@ -58,6 +58,13 @@ pip3 install 'Box2D==2.3.2'
 # GLFW error (code %d): %s 65542 b'EGL: Failed to get EGL display: Success'
 # Sol -> Make sure nvidia-gpu is enabled
 
+########################################################################
+# Trouble-shooting - Import scipy
+# RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+# Sol -> 
+# pip uninstall -y scipy scikit-learn
+# pip install --no-binary scipy scikit-learn
+
 
 
 
