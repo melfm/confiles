@@ -20,3 +20,6 @@ git branch | grep -v "master" | xargs git branch -D
 % Updating submodule
 
 git submodule update --recursive --remote
+
+% Remove release tags
+git push --delete origin YOUR_TAG_NAME
