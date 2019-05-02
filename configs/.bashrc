@@ -138,15 +138,39 @@ export WORKSPACE="$HOME/Workspace"
 
 alias python="python3.5"
 
+# Common dirs
 alias down="cd ~/Downloads";
-alias mlplay="cd $WORKSPACE/ml-playground/"
-alias cs231="cd $WORKSPACE/ml-playground/playground/cs231n/"
 
-# ML Playground
-alias deeprl="cd $WORKSPACE/ml-playground/playground/CS294/hw1/"
-# TODO: Update this
-alias csact="cd $WORKSPACE/ml-playground/playground/cs231n/; source .env/bin/activate; deeprl"
+# Clean swp files
+alias cleanswp="cd /tmp; rm *.swp"
 
 # CARLA
 alias carla="cd /home/melissa/Workspace/CARLA_0.8.4"
 alias actcar="carla; cd PythonClient; source .carla/bin/activate"
+
+# Mujoco paths
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/adaptation/mfmozifi/.mujoco/mjpro150/bin:/usr/lib/nvidia-396:/usr/local/cuda-9.0/lib64"
+export LD_PRELOAD="/usr/lib/x86_64-linux-gnu/libGLEW.so"
+
+# lulu - work
+alias mel="cd /usr/local/data/melfm"
+
+# LSDR project
+alias spin="source /usr/local/data/melfm/virt_evns/spinning/bin/activate"
+alias spinup="cd /usr/local/data/melfm/spinningup"
+alias spinplot="python spinup/utils/plot.py"
+alias spinppo="python spinup/algos/ppo/experiment_runner.py"
+alias ppotran="python spinup/algos/ppo/ppo_transfer.py"
+alias spinat="source /usr/local/data/melfm/Workspace/virtual_envs/spinning/bin/activate"
+alias spinupat="cd /usr/local/data/melfm/Workspace/spinningup"
+
+# Server hooks
+alias hookupcedar="sshfs -o reconnect -o Ciphers=aes128-ctr -o Compression=no melfm24@cedar.computecanada.ca:/home/melfm24/projects/def-dpmeger/melfm24 cedar"
+alias hookupbeluga="sshfs melfm24@beluga.computecanada.ca:/home/melfm24/projects/def-dpmeger/melfm24 beluga"
+
+alias hookupatl="sshfs mfmozifi@atlantis.cim.mcgill.ca:/usr/local/data/melfm atlantis"
+
+
+
+
+
