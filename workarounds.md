@@ -23,3 +23,12 @@ git submodule update --recursive --remote
 
 % Remove release tags
 git push --delete origin YOUR_TAG_NAME
+
+
+--------------------------------------------------
+Ubuntu 18.04 tricks
+lxappearance
+https://askubuntu.com/questions/1030695/how-do-i-get-icons-for-thunar-in-18-04
+
+Cuda 10.0 breaking mouse/keyboard
+After installation, re-install the package that it removes (sudo apt-get install xserver-xorg-input)
