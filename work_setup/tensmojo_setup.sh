@@ -57,6 +57,7 @@ pip3 install 'Box2D==2.3.2'
 
 # GLFW error (code %d): %s 65542 b'EGL: Failed to get EGL display: Success'
 # Sol -> Make sure nvidia-gpu is enabled
+# export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGLEW.so
 
 ########################################################################
 # Trouble-shooting - Import scipy
