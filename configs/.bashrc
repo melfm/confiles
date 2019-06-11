@@ -116,61 +116,48 @@ if ! shopt -oq posix; then
   fi
 fi
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-# Disable touchpad tap click on dell xp
-synclient MaxTapTime=0
+####################################################
+# CUDA
+export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 
-# SHELL SETTINGS
-parse_git_branch() {
-        git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
-    }
-PS1='[\w]\[\033[1;35m\]$(parse_git_branch)\[\033[0m\] > '
+# MUJOCO
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/melissa/.mujoco/mjpro150/bin
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGLEW.so
 
-export PATH="$PATH:/usr/local/cuda-8.0/bin"
-export CUDA_HOME="/usr/local/cuda-8.0/"
-
-# Added for mujoco
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/.mujoco/mjpro150/bin:/usr/lib/nvidia-384:/usr/local/cuda-8.0/lib64"
-# Needed for GL version
-export LD_PRELOAD="/usr/lib/x86_64-linux-gnu/libGLEW.so"
-
+# Generic
+alias cleanswp="cd /tmp; rm *.swp"
 export WORKSPACE="$HOME/Workspace"
-
-alias python="python3.5"
 
 # Common dirs
 alias down="cd ~/Downloads";
+alias up="cd ../"
 
-# Clean swp files
-alias cleanswp="cd /tmp; rm *.swp"
+# Python
+# alias python="python3.6"
 
-# CARLA
-alias carla="cd /home/melissa/Workspace/CARLA_0.8.4"
-alias actcar="carla; cd PythonClient; source .carla/bin/activate"
+# Servers
+alias beluga="ssh melfm24@beluga.computecanada.ca"
+alias cedar="ssh melfm24@cedar.computecanada.ca"
+alias bhookup="sshfs melfm24@beluga.computecanada.ca:/home/melfm24/projects/def-dpmeger/melfm24 beluga"
+alias chookup="sshfs melfm24@cedar.computecanada.ca:/home/melfm24/projects/def-dpmeger/melfm24 cedar"
 
-# Mujoco paths
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/adaptation/mfmozifi/.mujoco/mjpro150/bin:/usr/lib/nvidia-396:/usr/local/cuda-9.0/lib64"
-export LD_PRELOAD="/usr/lib/x86_64-linux-gnu/libGLEW.so"
-
-# lulu - work
-alias mel="cd /usr/local/data/melfm"
-
+# lulu
+# alias mel="cd /usr/local/data/melfm"
 # LSDR project
 alias spin="source /usr/local/data/melfm/virt_evns/spinning/bin/activate"
 alias spinup="cd /usr/local/data/melfm/spinningup"
 alias spinplot="python spinup/utils/plot.py"
 alias spinppo="python spinup/algos/ppo/experiment_runner.py"
 alias ppotran="python spinup/algos/ppo/ppo_transfer.py"
+
+# atlantis
+alias hookupatl="sshfs mfmozifi@atlantis.cim.mcgill.ca:/usr/local/data/melfm atlantis"
 alias spinat="source /usr/local/data/melfm/Workspace/virtual_envs/spinning/bin/activate"
 alias spinupat="cd /usr/local/data/melfm/Workspace/spinningup"
-
-# Server hooks
-alias hookupcedar="sshfs -o reconnect -o Ciphers=aes128-ctr -o Compression=no melfm24@cedar.computecanada.ca:/home/melfm24/projects/def-dpmeger/melfm24 cedar"
-alias hookupbeluga="sshfs melfm24@beluga.computecanada.ca:/home/melfm24/projects/def-dpmeger/melfm24 beluga"
-
 alias hookupatl="sshfs mfmozifi@atlantis.cim.mcgill.ca:/usr/local/data/melfm atlantis"
 
-
-
-
-
+# UoT RL
+alias imit="cd /home/melissa/Workspace/RLProject"
+alias imitact="cd /home/melissa/Workspace/; source virtual_envs/imit/bin/activatei; imit"
