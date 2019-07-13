@@ -24,7 +24,8 @@ install_dependencies()
 	python-matplotlib \
 	arandr \
 	xclip \
-	sshfs
+	sshfs \
+	meld
 }
 
 
