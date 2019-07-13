@@ -109,7 +109,6 @@ init()
     install_dependencies
     install_python_pckgs
     install_dropbox
-    install_chrome
     install_spotify
     git_config
     install_python_dev
