@@ -20,10 +20,11 @@ install_dependencies()
         thunar-archive-plugin \
         xfce4-screenshooter \
         tmux \
-        redshift redshift-gtk
+        redshift redshift-gtk \
 	python-matplotlib \
 	arandr \
-	xclip
+	xclip \
+	sshfs
 }
 
 
