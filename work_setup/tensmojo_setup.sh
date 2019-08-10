@@ -67,6 +67,10 @@ pip3 install 'Box2D==2.3.2'
 # pip install --no-binary scipy scikit-learn
 
 
-
+#######################################################################
+#/tmp/pip-install-sufy7af7/mujoco-py/mujoco_py/cymj.c:52:20: fatal error: Python.h: No such file or directory
+#    compilation terminated.
+#    error: command 'x86_64-linux-gnu-gcc' failed with exit status 1
+# Sol -> sudo apt-get install python3-dev
 
 
