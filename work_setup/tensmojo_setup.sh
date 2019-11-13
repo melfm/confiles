@@ -79,3 +79,9 @@ pip3 install 'Box2D==2.3.2'
 # Sol -> sudo apt-get install python3-dev
 
 
+# DMSuit
+#   .... site-packages/OpenGL/extensions.py", line 105, in __call__
+#    if not specifier.startswith( self.prefix ):
+# TypeError: startswith first arg must be bytes or a tuple of bytes, not str
+# The error you see when GPU is not enabled for OpenGL. You need to enable the gpu or find a different way to render on CPU?
+
