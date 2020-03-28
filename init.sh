@@ -14,7 +14,6 @@ install_dependencies()
         xbacklight \
         network-manager-gnome \
         thunar \
-        gnome-icon-theme-full \
         pavucontrol \
         v4l-utils \
         thunar-archive-plugin \
