@@ -7,13 +7,14 @@ install_dependencies()
     sudo apt-get install -y \
 	xterm \
         git \
-	exuberant-ctags \
+	    exuberant-ctags \
         vim-nox \
         i3 \
         xinit \
         xbacklight \
         network-manager-gnome \
         thunar \
+        lxappearance \
         pavucontrol \
         v4l-utils \
         thunar-archive-plugin \
@@ -24,7 +25,8 @@ install_dependencies()
 	arandr \
 	xclip \
 	sshfs \
-	meld
+	meld \
+	htop
 }
 
 
@@ -56,13 +58,6 @@ install_python_pckgs()
     sudo pip install virtualenv
 }
 
-install_spotify()
-{
-     sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
-     echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
-     sudo apt-get update
-     sudo apt-get install spotify-client
-}
 
 git_config()
 {
@@ -108,8 +103,7 @@ init()
 {
     install_dependencies
     install_python_pckgs
-    install_dropbox
-    install_spotify
+    # install_dropbox
     git_config
     install_python_dev
     init_dotfiles
