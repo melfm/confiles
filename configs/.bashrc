@@ -160,6 +160,10 @@ alias bhookup="sshfs melfm24@beluga.computecanada.ca:/home/melfm24/projects/def-
 alias chookup="sshfs melfm24@cedar.computecanada.ca:/home/melfm24/projects/def-dpmeger/melfm24 cedar"
 
 # lulu
+alias hookup="sshfs mfmozifi@lulu.cim.mcgill.ca:/usr/local/data/melfm lulu"
+alias unhook="fusermount -u lulu"
+alias lulu="ssh -X -Y mfmozifi@lulu.cim.mcgill.ca"
+
 # alias mel="cd /usr/local/data/melfm"
 # LSDR project
 alias spin="source /usr/local/data/melfm/virt_evns/spinning/bin/activate"
@@ -174,6 +178,3 @@ alias spinat="source /usr/local/data/melfm/Workspace/virtual_envs/spinning/bin/a
 alias spinupat="cd /usr/local/data/melfm/Workspace/spinningup"
 alias hookupatl="sshfs mfmozifi@atlantis.cim.mcgill.ca:/usr/local/data/melfm atlantis"
 
-# UoT RL
-alias imit="cd /home/melissa/Workspace/RLProject"
-alias imitact="cd /home/melissa/Workspace/; source virtual_envs/imit/bin/activatei; imit"
