@@ -26,7 +26,8 @@ install_dependencies()
 	xclip \
 	sshfs \
 	meld \
-	htop
+	htop \
+	feh
 }
 
 
