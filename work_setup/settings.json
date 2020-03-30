@@ -1,0 +1,10 @@
+# code.visualstudio python settings
+
+# Start - device(lulu)
+
+{
+    "python.linting.enabled": true,
+    "python.pythonPath": "/usr/local/data/melfm/virt_evns/dmsuit/lib/python3.6",
+}
+
+# End
