@@ -131,14 +131,14 @@ PS1='[\w]\[\033[1;35m\]$(parse_git_branch)\[\033[0m\] > '
 
 ####################################################
 # CUDA 10.0
-export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+#export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
+#export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+#export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 
 # MUJOCO
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/melissa/.mujoco/mjpro150/bin
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/melissa/.mujoco/mjpro150/bin
 # Needed for GL version
-export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGLEW.so
+#export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGLEW.so
 # CUDA 8.0
 # export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/.mujoco/mjpro150/bin:/usr/lib/nvidia-384:/usr/local/cuda-8.0/lib64"
 
