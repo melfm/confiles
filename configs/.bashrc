@@ -118,7 +118,10 @@ fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 # Disable touchpad tap click on dell xp
-synclient MaxTapTime=0
+# synclient MaxTapTime=0
+
+# Ubuntu 18.04 Monitor Sound issue
+alias sound="sudo alsa force-reloda"
 
 # SHELL SETTINGS
 parse_git_branch() {
