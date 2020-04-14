@@ -85,3 +85,11 @@ pip3 install 'Box2D==2.3.2'
 # TypeError: startswith first arg must be bytes or a tuple of bytes, not str
 # The error you see when GPU is not enabled for OpenGL. You need to enable the gpu or find a different way to render on CPU?
 
+
+# If you still an error that -lGL cannot be found,
+# r/lib.linux-x86_64-3.6/mujoco_py/cymj.cpython-36m-x86_64-linux-gnu.so -fopenmp
+#     /usr/bin/ld: cannot find -lGL
+#     collect2: error: ld returned 1 exit status
+#     error: command 'x86_64-linux-gnu-gcc' failed with exit status 1
+# Sol -> sudo ln -s /usr/lib/x86_64-linux-gnu/libGL.so.1 /usr/lib/x86_64-linux-gnu/libGL.so
+
