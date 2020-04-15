@@ -21,7 +21,7 @@ pip3 install tensorflow-gpu
 
 # Download and unzip
 wget https://www.roboti.us/download/mjpro150_linux.zip -O ~/Downloads/mjpro150_linux.zip
-unzip ~/Downloads/mjpro150_linux.zip -d ~/.mjpro150
+unzip ~/Downloads/mjpro150_linux.zip -d ~/.mujoco/
 rm ~/Downloads/mjpro150_linux.zip
 
 # Mujoco 200
