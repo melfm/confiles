@@ -59,6 +59,7 @@ pip3 install 'Box2D==2.3.2'
 # Creating window glfw
 # ERROR: GLEW initalization error: Missing GL version
 # Sol -> sudo apt-get install libglew-dev
+# export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGLEW.so
 
 # GLFW error (code %d): %s 65542 b'EGL: Failed to get EGL display: Success'
 # Sol -> Make sure nvidia-gpu is enabled
