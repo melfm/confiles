@@ -135,15 +135,23 @@ PS1='[\w]\[\033[1;35m\]$(parse_git_branch)\[\033[0m\] > '
 ####################################################
 # CUDA 10.0
 #export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
-#export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 #export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 
+export LD_LIBRARY_PATH=/home/cuda-10.0/lib64/${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
 # MUJOCO
-#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/melissa/.mujoco/mjpro150/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/melissa/.mujoco/mjpro150/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/melissa/.mujoco/mujoco200/bin
+
+# GL
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGLEW.so
 # Needed for GL version
 #export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGLEW.so
 # CUDA 8.0
 # export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/.mujoco/mjpro150/bin:/usr/lib/nvidia-384:/usr/local/cuda-8.0/lib64"
+
+# Open settings from terminal
+alias opensetting="env XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
 
 # Generic
 alias cleanswp="cd /tmp; rm *.swp"
@@ -160,6 +168,7 @@ alias up="cd ../"
 alias beluga="ssh melfm24@beluga.computecanada.ca"
 alias cedar="ssh melfm24@cedar.computecanada.ca"
 alias bhookup="sshfs melfm24@beluga.computecanada.ca:/home/melfm24/projects/def-dpmeger/melfm24 beluga"
+alias bfhookup="sshfs melfm24@beluga.computecanada.ca:/home/melfm24/projects/def-florian7/melfm24 beluga"
 alias chookup="sshfs melfm24@cedar.computecanada.ca:/home/melfm24/projects/def-dpmeger/melfm24 cedar"
 
 # lulu
@@ -176,8 +185,12 @@ alias spinppo="python spinup/algos/ppo/experiment_runner.py"
 alias ppotran="python spinup/algos/ppo/ppo_transfer.py"
 
 # atlantis
+alias atlantis="ssh -X -Y mfmozifi@atlantis.cim.mcgill.ca"
 alias hookupatl="sshfs mfmozifi@atlantis.cim.mcgill.ca:/usr/local/data/melfm atlantis"
 alias spinat="source /usr/local/data/melfm/Workspace/virtual_envs/spinning/bin/activate"
 alias spinupat="cd /usr/local/data/melfm/Workspace/spinningup"
-alias hookupatl="sshfs mfmozifi@atlantis.cim.mcgill.ca:/usr/local/data/melfm atlantis"
+alias hookupatl="sshfs mfmozifi@atlantis.cim.mcgill.ca:/usr/local/data/melfm/Workspace atlantis"
 
+# MelDesktop
+alias dmsuit="source ~/Workspace/virtual_envs/dmsuit/bin/activate"
+alias bench="cd ~/Workspace/C767_project"
