@@ -36,4 +36,10 @@ After installation, re-install the package that it removes (sudo apt-get install
 $ i3 - Opening settings
 env XDG_CURRENT_DESKTOP=GNOME gnome-control-center
 
+--------------------------------------------------
+VLC not playing video via sshf
+By default, vlc is confined, remove and re-install
 
+```sudo snap remove vlc```
+
+```sudo apt-get install vlc```
