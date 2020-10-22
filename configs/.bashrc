@@ -129,14 +129,13 @@ parse_git_branch() {
     }
 PS1='[\w]\[\033[1;35m\]$(parse_git_branch)\[\033[0m\] > '
 
-# export PATH="$PATH:/usr/local/cuda-8.0/bin"
-# export CUDA_HOME="/usr/local/cuda-8.0/"
+# ssh agent
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+ eval `ssh-agent -s`
+fi
 
 ####################################################
 # CUDA 10.0
-#export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
-#export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
-
 export LD_LIBRARY_PATH=/home/cuda-10.0/lib64/${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
 # MUJOCO
@@ -162,7 +161,7 @@ alias down="cd ~/Downloads";
 alias up="cd ../"
 
 # Python
-# alias python="python3.6"
+alias python="python3.6"
 
 # Servers
 alias beluga="ssh melfm24@beluga.computecanada.ca"
@@ -193,4 +192,3 @@ alias hookupatl="sshfs mfmozifi@atlantis.cim.mcgill.ca:/usr/local/data/melfm/Wor
 
 # MelDesktop
 alias dmsuit="source ~/Workspace/virtual_envs/dmsuit/bin/activate"
-alias bench="cd ~/Workspace/C767_project"
