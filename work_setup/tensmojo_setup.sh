@@ -26,8 +26,9 @@ rm ~/Downloads/mjpro150_linux.zip
 
 # Mujoco 200
 wget https://www.roboti.us/download/mujoco200_linux.zip -O ~/Downloads/mujoco200_linux.zip
-unzip ~/Downloads/mujoco200_linux.zip -d ~/.mujoco/mujoco200_linux
+unzip ~/Downloads/mujoco200_linux.zip -d ~/.mujoco/mujoco200
 rm ~/Downloads/mujoco200_linux.zip
+# Make sure the unzipped will be ~/.mujoco/mujoco200 and not  ~/.mujoco/mujoco200/mujoco200_linux
 
 # Set paths
 # echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/ml/$USER/.mjpro150/mjpro150/bin">>~/.bashrc
