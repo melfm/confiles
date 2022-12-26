@@ -1,4 +1,26 @@
 {
-    "window.zoomLevel": -1,
-    "workbench.editor.enablePreview": false
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "terminal.integrated.inheritEnv": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "python.formatting.autopep8Args": [
+        "yapf"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "eetami.whitespace-formatter"
+    },
+    "editor.renderWhitespace": "none",
+    "python.analysis.extraPaths": [
+        "~/.local/lib/Google/google_appengine",
+        "~/.local/lib/Google/google_appengine/lib/flask-0.12"
+    ],
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
 }
