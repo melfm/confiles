@@ -187,22 +187,15 @@ client.background       #ffffff
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
-# Volume control - Ubuntu 16.04
+# Volume control
 bindsym XF86AudioRaiseVolume  exec amixer set Master 5%+
 bindsym XF86AudioLowerVolume  exec amixer set Master 5%-
 bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
-
-# Volume control - Ubuntu 18.04
-#bindsym XF86AudioRaiseVolume  exec amixer -D pulse sset Master 5%+
-#bindsym XF86AudioLowerVolume  exec amixer -D pulse sset Master 5%-
-#bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
 
 #Lock computer
 bindsym $mod+Delete exec --no-startup-id "i3lock -c 000000"
 #Suspend
 bindsym $mod+Control+Delete exec systemctl suspend -i
-# ubuntu 14.04
-#bindsym $mod+Control+Delete exec "sudo /usr/sbin/pm-suspend"
 
 #Lock screen and suspend
 bindsym $mod+End exec --no-startup-id "i3lock -c 000000 && systemctl suspend"
