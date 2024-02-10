@@ -3,6 +3,9 @@ exec --no-startup-id dropbox start
 exec --no-startup-id xsetroot -solid "#222222"
 #exec --no-startup-id feh --bg-scale '/home/melissa/Pictures/wallpaper/909284.png'
 exec --no-startup-id nm-applet
+# Disable the middle click on lenovo
+exec --no-startup-id xinput set-button-map 13 1 0 3 4 5 6 7
+exec_always --no-startup-id /home/melissa/.config/resolution.sh
 
 set $mod Mod4
 
@@ -184,12 +187,12 @@ client.background       #ffffff
 
 
 # Brightness control
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec brightnessctl set +5% # increase screen brightness
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%- # decrease screen brightness
 
 # Volume control
-bindsym XF86AudioRaiseVolume  exec amixer set Master 5%+
-bindsym XF86AudioLowerVolume  exec amixer set Master 5%-
+bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 2%+
+bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 2%-
 bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
 
 #Lock computer
